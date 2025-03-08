@@ -1,0 +1,98 @@
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Conteneur du formulaire */
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+/* Titre */
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ff5722;
+}
+
+/* Groupe d'entrée */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 0.3s;
+}
+
+/* Effet de focus */
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: 5px;
+    font-size: 12px;
+    color: #ff5722;
+}
+
+/* Bouton */
+button {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e64a19;
+}
+
+/* Lien d'inscription */
+p {
+    margin-top: 10px;
+}
+
+p a {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Message d'erreur */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}

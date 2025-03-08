@@ -1,0 +1,197 @@
+/* Réinitialisation des styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin-top: 80px; /* Compense la hauteur du header fixe */
+}
+
+/* Header (En-tête) */
+header {
+    background-color: whitesmoke;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Logo */
+header .logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* Menu de navigation */
+#menu-non-connecte, #menu-connecte {
+    display: flex;
+}
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+/* Cacher le menu connecté lorsque l'utilisateur n'est pas connecté */
+#menu-connecte {
+    display: none; /* Le menu connecté est caché par défaut */
+}
+
+
+/* Afficher le menu non connecté */
+#menu-non-connecte {
+    display: flex; /* Assure que le menu non connecté est toujours visible */
+}
+
+
+
+/* Section principale */
+main {
+    margin-top: 80px; /* Ajuste l'espace pour éviter que le header cache le contenu */
+}
+
+/* Section Hero */
+.hero {
+    background-image: url(https://i.pinimg.com/236x/68/b4/84/68b484d5d00da418c7f88149be30fd8f.jpg);
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Bouton "Commencer" */
+#start-button {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#start-button:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Poèmes populaires */
+.popular-stories {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.popular-stories h2 {
+    margin-bottom: 20px;
+}
+
+.story-card {
+    display: inline-block;
+    width: 220px;
+    margin: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+}
+
+.story-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.story-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.story-card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+footer .contenu-footer img {
+    width: 30px; /* Largeur */
+    height: auto; /* Hauteur automatique pour conserver le ratio */}
